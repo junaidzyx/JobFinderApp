@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="412dp"
+        android:layout_height="264dp"
+        android:background="@drawable/gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/searchbar"
+            android:layout_width="313dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/search_text"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Search"
+            app:layout_constraintBottom_toBottomOf="@+id/filter_button"
+            app:layout_constraintEnd_toEndOf="@+id/username"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/filter_button"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/filter_button"
+            android:layout_width="43dp"
+            android:layout_height="42dp"
+            android:background="@drawable/rounded_button_stroke"
+            android:contentDescription="Filter button"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toEndOf="@+id/searchbar"
+            app:layout_constraintTop_toBottomOf="@+id/moto"
+            app:layout_constraintVertical_bias="0.413"
+            app:srcCompat="@drawable/filter"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/moto"
+            android:layout_width="378dp"
+            android:layout_height="65dp"
+            android:fontFamily="sans-serif-light"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.502"
+            tools:text="Let's get you hired for the job you deserve!" />
+
+        <ImageView
+            android:id="@+id/user_profile_picture"
+            android:layout_width="60dp"
+            android:layout_height="58dp"
+            app:layout_constraintBottom_toTopOf="@+id/moto"
+            app:layout_constraintEnd_toStartOf="@+id/welcome_back"
+            app:layout_constraintHorizontal_bias="0.772"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.512"
+            tools:srcCompat="@drawable/profile_picture_temp" />
+
+        <TextView
+            android:id="@+id/welcome_back"
+            android:layout_width="248dp"
+            android:layout_height="17dp"
+            android:text="Welcome back"
+            app:layout_constraintBottom_toTopOf="@+id/moto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/user_profile_picture"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="246dp"
+            android:layout_height="32dp"
+            android:text="David Robet Willingson"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/moto"
+            app:layout_constraintEnd_toStartOf="@+id/notification_icon"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toEndOf="@+id/user_profile_picture"
+            app:layout_constraintTop_toTopOf="@+id/user_profile_picture"
+            app:layout_constraintVertical_bias="0.545" />
+
+        <ImageButton
+            android:id="@+id/notification_icon"
+            android:layout_width="60dp"
+            android:layout_height="57dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="Notification button"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/welcome_back"
+            app:srcCompat="@drawable/notification" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/jobs_layout"
+        android:layout_width="410dp"
+        android:layout_height="689dp"
+        android:background="@drawable/rounded_top_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_layout">
+
+        <TextView
+            android:id="@+id/see_all_button"
+            android:layout_width="126dp"
+            android:layout_height="29dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="See All"
+            android:textAlignment="textEnd"
+            android:textColor="#2F74FF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/matched_job_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.753"
+            app:layout_constraintStart_toEndOf="@+id/matched_job_text"
+            app:layout_constraintTop_toTopOf="@+id/matched_job_text"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/matched_job_text"
+            android:layout_width="206dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="12dp"
+            android:text="Job match with you"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/category_list"
+            app:layout_constraintTop_toBottomOf="@+id/category_list" />
+
+        <TextView
+            android:id="@+id/category_text_main"
+            android:layout_width="360dp"
+            android:layout_height="33dp"
+            android:text="Category"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024" />
+
+        <LinearLayout
+            android:id="@+id/job_listing_layout"
+            android:layout_width="415dp"
+            android:layout_height="507dp"
+            android:orientation="vertical"
+            android:paddingLeft="23dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matched_job_text"
+            app:layout_constraintVertical_bias="0.666">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/job_card_back_1"
+                android:layout_width="380dp"
+                android:layout_height="169dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/job_card_back">
+
+                <TextView
+                    android:id="@+id/job1_status"
+                    android:layout_width="85dp"
+                    android:layout_height="31dp"
+
+                    android:background="@drawable/rounded_button_color"
+                    android:text="URGENT"
+                    android:textAlignment="center"
+                    android:textColor="#D10909"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/job_card_in_1"
+                    app:layout_constraintHorizontal_bias="0.871"
+                    app:layout_constraintStart_toEndOf="@+id/job1_applications"
+                    app:layout_constraintTop_toBottomOf="@+id/job_card_in_1"
+                    app:layout_constraintVertical_bias="0.888" />
+
+                <TextView
+                    android:id="@+id/job1_applications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="58 Applications"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/job1_time_posted"
+                    app:layout_constraintEnd_toEndOf="@+id/job_card_in_1"
+                    app:layout_constraintHorizontal_bias="0.153"
+                    app:layout_constraintStart_toEndOf="@+id/job1_time_posted" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/job_card_in_1"
+                    android:layout_width="365dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/job_card_back_in"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.533"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05">
+
+                    <TextView
+                        android:id="@+id/job1_company_location"
+                        android:layout_width="162dp"
+                        android:layout_height="19dp"
+                        android:text="Google . Austria"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.325"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/job1_company_logo"
+                        app:layout_constraintVertical_bias="0.345" />
+
+                    <LinearLayout
+                        android:id="@+id/job1_tags"
+                        android:layout_width="335dp"
+                        android:layout_height="31dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0">
+
+                        <TextView
+                            android:id="@+id/removeforeu_tag1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_button_stroke"
+                            android:text="Remove for EU only"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/fulltime_tag1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_button_stroke"
+                            android:text="Full-time"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/moretags_tag1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_button_stroke"
+                            android:text="+5"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/job1_company_logo"
+                        android:layout_width="48dp"
+                        android:layout_height="47dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/job1_tags"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.009"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.054"
+                        tools:srcCompat="@drawable/google_logo" />
+
+                    <TextView
+                        android:id="@+id/job1_post"
+                        android:layout_width="161dp"
+                        android:layout_height="23dp"
+                        android:text="Accountant"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.325"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/job1_company_logo"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/job1_salary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:text="@string/salary"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/job1_company_location"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.985"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/job1_post"
+                        app:layout_constraintVertical_bias="1.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/job1_time_posted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+
+                    android:text="30 min ago"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/job_card_in_1"
+                    app:layout_constraintTop_toBottomOf="@+id/job_card_in_1"
+                    app:layout_constraintVertical_bias="0.733" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/job_card_back_2"
+                android:layout_width="380dp"
+                android:layout_height="169dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/job_card_back">
+
+                <TextView
+                    android:id="@+id/job2_status"
+                    android:layout_width="85dp"
+                    android:layout_height="31dp"
+
+                    android:background="@drawable/rounded_button_color"
+                    android:text="URGENT"
+                    android:textAlignment="center"
+                    android:textColor="#D10909"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/job_card_in_2"
+                    app:layout_constraintHorizontal_bias="0.871"
+                    app:layout_constraintStart_toEndOf="@+id/job2_applications"
+                    app:layout_constraintTop_toBottomOf="@+id/job_card_in_2"
+                    app:layout_constraintVertical_bias="0.888" />
+
+                <TextView
+                    android:id="@+id/job2_applications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="58 Applications"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/job2_time_posted"
+                    app:layout_constraintEnd_toEndOf="@+id/job_card_in_2"
+                    app:layout_constraintHorizontal_bias="0.153"
+                    app:layout_constraintStart_toEndOf="@+id/job2_time_posted" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/job_card_in_2"
+                    android:layout_width="365dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/job_card_back_in"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.533"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05">
+
+                    <TextView
+                        android:id="@+id/job2_company_location"
+                        android:layout_width="162dp"
+                        android:layout_height="19dp"
+                        android:text="Google . Austria"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.325"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/job2_company_logo"
+                        app:layout_constraintVertical_bias="0.345" />
+
+                    <LinearLayout
+                        android:id="@+id/job2_tags"
+                        android:layout_width="335dp"
+                        android:layout_height="31dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0">
+
+                        <TextView
+                            android:id="@+id/removeforeu_tag2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_button_stroke"
+                            android:text="Remove for EU only"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/fulltime_tag2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_button_stroke"
+                            android:text="Full-time"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/moretags_tag2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_button_stroke"
+                            android:text="+5"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/job2_company_logo"
+                        android:layout_width="48dp"
+                        android:layout_height="47dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/job2_tags"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.009"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.054"
+                        tools:srcCompat="@drawable/google_logo" />
+
+                    <TextView
+                        android:id="@+id/job2_post"
+                        android:layout_width="161dp"
+                        android:layout_height="23dp"
+                        android:text="Accountant"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.325"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/job2_company_logo"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/job2_salary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:text="@string/salary"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/job2_company_location"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.985"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/job2_post"
+                        app:layout_constraintVertical_bias="1.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/job2_time_posted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+
+                    android:text="30 min ago"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/job_card_in_2"
+                    app:layout_constraintTop_toBottomOf="@+id/job_card_in_2"
+                    app:layout_constraintVertical_bias="0.733" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/category_list"
+            android:layout_width="363dp"
+            android:layout_height="53dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_text_main"
+            app:layout_constraintVertical_bias="0.022">
+
+            <Button
+                android:id="@+id/all_category"
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:text="All"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
